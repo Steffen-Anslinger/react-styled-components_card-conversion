@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import { Silkscreen } from "next/font/google";
+
+const silkScreen = Silkscreen({ subsets: ["latin"], weight: "400" });
 
 export default createGlobalStyle`
   *,
@@ -9,7 +12,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: system-ui;
+    font-family: ${silkScreen.style.fontFamily};
     line-height: 1.5;
   }
 
